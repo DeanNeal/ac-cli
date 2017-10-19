@@ -1,22 +1,26 @@
 #!/usr/bin/env node
-var fs = require('fs');
-var rimraf = require('rimraf');
+const fs = require('fs');
+const rimraf = require('rimraf');
 const path = require('path');
-var mkdirp = require('mkdirp');
+const mkdirp = require('mkdirp');
+
+const componentPath = path.relative(process.cwd(), 'lib/component.js');
+
 
 // Delete the 0 and 1 argument (node and script.js)
-var args = process.argv.splice(process.execArgv.length + 2);
+const args = process.argv.splice(process.execArgv.length + 2);
 // console.log(args);
 
 // The absolute path of the new file with its name
 
 if(args[0] === 'g') {
 	if(args[1]) {
-		var dir = args[1];
+		const dir = args[1];
 
 		if (fs.existsSync(dir)){
-			console.log('done');
+			
 			rimraf(dir, function () {
+				 console.log('folder is removed');
 				 createComponent(dir);
 			});
 		} else {
@@ -43,11 +47,9 @@ function createComponent(dir) {
     if (err) {
    		 console.error(err)	
     } else {
-    	console.log('pow!')
+    	const filepath = args[1] + '/' + args[2] + '.component';
 
-    	var filepath = args[1] + '/' + args[2] + '.component';
-
-    	getComponent('lib/component.js', (fileContent)=>{
+    	getComponent(componentPath, (fileContent)=>{
     		  fs.writeFile(filepath + '.js', fileContent, (err) => {
     		      if (err) throw err;
     		  }); 
