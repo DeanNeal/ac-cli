@@ -2,7 +2,14 @@
 
   > ac-cli - is a generator for ace-js framework
 
+[![NPM](https://img.shields.io/npm/v/ac-cli.svg)](https://www.npmjs.com/package/ac-cli)
+[![Downloads](https://img.shields.io/npm/dm/ac-cli.svg)](http://npm-stat.com/charts.html?package=ac-cli)
+[![License](https://img.shields.io/github/license/DeanNeal/ac-cli.svg?style=flat-square)](https://npmjs.org/package/ac-cli)
+[![Issues](https://img.shields.io/github/issues/DeanNeal/ac-cli.svg?style=flat-square)](https://github.com/DeanNeal/ac-cli/issues)
+
+
 ## Installation
+[![NPM](https://nodei.co/npm/ace-cli.png)](https://nodei.co/npm/ac-cli/)
 
 Using npm:
 
