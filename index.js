@@ -4,8 +4,7 @@ const rimraf = require('rimraf');
 const path = require('path');
 const mkdirp = require('mkdirp');
 
-const componentPath = path.relative(process.cwd(), 'lib/component.js');
-
+const componentPath = path.relative(process.cwd(), './lib/component.js');
 
 // Delete the 0 and 1 argument (node and script.js)
 const args = process.argv.splice(process.execArgv.length + 2);
