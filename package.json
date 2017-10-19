@@ -1,0 +1,19 @@
+{
+  "name": "ac-cli",
+  "version": "0.0.2",
+  "description": "ace-js generator",
+  "main": "index.js",
+  "bin": {
+    "ac-cli": "index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bogdan Zinkevich",
+  "license": "MIT",
+  "devDependencies": {
+    "fs": "0.0.1-security",
+    "rimraf": "^2.6.2"
+  },
+  "preferGlobal": "true"
+}
