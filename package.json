@@ -2,6 +2,8 @@
   "name": "ac-cli",
   "version": "0.0.3",
   "description": "ace-js generator",
+  "keywords": "ac-cli, ace-js, cli",
+  "repository": "https://github.com/DeanNeal/ac-cli.git",
   "main": "index.js",
   "bin": {
     "ac-cli": "index.js"
