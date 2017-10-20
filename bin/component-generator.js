@@ -3,12 +3,18 @@ const fs = require('fs');
 const rimraf = require('rimraf');
 const path = require('path');
 const mkdirp = require('mkdirp');
+const isGlobal = require ("is-global");
 
-const componentPath =  !process.env.npm_config_global ? './bin/component.js' : 'node_modules/ac-cli/bin/component.js';
+let componentPath = '';
+
+if (isGlobal ()){
+  componentPath = 'node_modules/ac-cli/bin/component.js';
+}else{
+  componentPath = './bin/component.js';
+}
 
 // Delete the 0 and 1 argument (node and script.js)
 const args = process.argv.splice(process.execArgv.length + 2);
-
 
 if(args[0] === 'g') {
 	if(args[1]) {
