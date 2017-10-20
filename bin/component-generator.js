@@ -4,14 +4,16 @@ const rimraf = require('rimraf');
 const path = require('path');
 const mkdirp = require('mkdirp');
 const isGlobal = require ("is-global");
+const globalModules = require('global-modules');
 
 let componentPath = '';
 
 if (isGlobal ()){
-  componentPath = 'node_modules/ac-cli/bin/component.js';
+  componentPath = globalModules + '/ac-cli/bin/component.js';
 }else{
   componentPath = './bin/component.js';
 }
+console.log(componentPath, globalModules);
 
 // Delete the 0 and 1 argument (node and script.js)
 const args = process.argv.splice(process.execArgv.length + 2);
