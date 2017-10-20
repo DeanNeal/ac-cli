@@ -4,7 +4,7 @@ const rimraf = require('rimraf');
 const path = require('path');
 const mkdirp = require('mkdirp');
 
-const componentPath =  './bin/component.js';
+const componentPath =  !process.env.npm_config_global ? './bin/component.js' : 'node_modules/ac-cli/bin/component.js';
 
 // Delete the 0 and 1 argument (node and script.js)
 const args = process.argv.splice(process.execArgv.length + 2);
