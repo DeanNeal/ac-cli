@@ -4,9 +4,9 @@
   "description": "ace-js generator",
   "keywords": "ac-cli, ace-js, cli",
   "repository": "https://github.com/DeanNeal/ac-cli.git",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "bin": {
-    "ac-cli": "index.js"
+    "ac-cli": "./bin/component-generator.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
